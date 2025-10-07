@@ -9,7 +9,8 @@ spec:
   - image: nginx:1.17
     name: test
 ```
-```controlplane:~$ kubectl  create  -f  pod.yml 
+```
+controlplane:~$ kubectl  create  -f  pod.yml 
 pod/test created
 controlplane:~$ 
 controlplane:~$ kubectl  get  pod
