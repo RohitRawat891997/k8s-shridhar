@@ -24,7 +24,6 @@ spec:
           - name: MYSQL_ROOT_PASSWORD
             value: redhat
 
-```
 controlplane:~$ 
 controlplane:~$ kubectl  create  deploy  demo  --image=mysql:5.6  --dry-run -o yaml  >  deploy.yml
 W1007 18:33:46.342545   32039 helpers.go:703] --dry-run is deprecated and can be replaced with --dry-run=client.
@@ -109,8 +108,7 @@ controlplane:~$
 controlplane:~$ kubectl  get  po
 NAME                    READY   STATUS    RESTARTS   AGE
 demo-767c8d474d-fmvjp   1/1     Running   0          6m49s
-```
-```
+
 controlplane:~$ 
 controlplane:~$ kubectl  describe  deploy  demo     
 Name:                   demo
@@ -148,8 +146,7 @@ Events:
   ----    ------             ----   ----                   -------
   Normal  ScalingReplicaSet  7m27s  deployment-controller  Scaled up replica set demo-767c8d474d from 0 to 1
 controlplane:~$ 
-```
-```
+
 controlplane:~$ 
 controlplane:~$ kubectl   scale --replicas=10  deploy demo 
 deployment.apps/demo scaled
