@@ -6,7 +6,7 @@ kind: ReplicationController
 metadata:
   name: test
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     app: test
   template:
