@@ -34,5 +34,18 @@ frontend-lz7tk   1/1     Running   0          3m13s   192.168.0.4    controlplan
 frontend-tcf6w   1/1     Running   0          3m13s   192.168.1.11   node01         <none>           <none>
 frontend-trbl6   1/1     Running   0          3m13s   192.168.1.10   node01         <none>           <none>
 controlplane:~$ 
+controlplane:~$
 controlplane:~$ 
+controlplane:~$ kubectl get  pod  --show-labels 
+NAME             READY   STATUS    RESTARTS   AGE     LABELS
+frontend-lz7tk   1/1     Running   0          6m27s   tier=frontend
+frontend-tcf6w   1/1     Running   0          6m27s   tier=frontend
+frontend-trbl6   1/1     Running   0          6m27s   tier=frontend
+controlplane:~$ 
+controlplane:~$ kubectl  get  rs
+NAME       DESIRED   CURRENT   READY   AGE
+frontend   3         3         3       6m42s
+controlplane:~$
+
+
 ```
